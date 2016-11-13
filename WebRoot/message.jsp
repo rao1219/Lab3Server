@@ -24,7 +24,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
    <fieldset>
-   		<h1><%=session.getAttribute("msg")%></h1>
+   		Hello, <%=session.getAttribute("name") %>
+   		<h5><%=session.getAttribute("msg")%></h5>
    </fieldset>
   </body>
 </html>

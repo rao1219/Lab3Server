@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'index.jsp' starting page</title>
+    <title>Lab2-3 Horoscope</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -48,7 +48,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     <fieldset> 
-		<legend> Lab 2 </legend> 
+		<legend> Lab 2-3 </legend> 
 		<form action="./Horoscope" name="horoscopeform" method="get" onSubmit="return checkform()"> Input your name: 
 			<input type="text" name="name" size="20"> 
 			<br>Input your sex:
