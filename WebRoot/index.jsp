@@ -43,13 +43,42 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		    return true;
 		  }
 		}
+		function displayHoroscope(sex, sign)
+		{
+			Array.prototype.contains = function(item){
+   			 RegExp("\\b"+item+"\\b").test(this);
+			};
+			var frm      = document.forms['horoscopeform'];
+		 	var name = frm.elements['name'].value;
+		 	var sex = frm.elements['sex'].value;
+		 	var zodiac = frm.elements['zodiac'].value;
+		 	
+		 	var earlyzodiacs = [];
+		 	earlyzodiacs.push("Aries");
+		 	earlyzodiacs.push("Taurus");
+			earlyzodiacs.push("Gemini");
+			earlyzodiacs.push("Cancer");
+			earlyzodiacs.push("Leo");
+			earlyzodiacs.push("Virgo");
+		 	
+			if(earlyZodiacs.contains(sign))
+			{
+				if(man)msg = "You will have a long life";
+				else msg = "You will find a tall handsome stranger.";
+			}
+			else{
+				if(man) msg = "You will have a rich life.";
+				else msg = "You will have six children.";
+			}
+			alert(msg);
+		}
 	</script>
   </head>
   
   <body>
     <fieldset> 
 		<legend> Lab 2-3 </legend> 
-		<form action="./Horoscope" name="horoscopeform" method="get" onSubmit="return checkform()"> Input your name: 
+		<form action="./Horoscope" id='horo' name="horoscopeform" method="get" onSubmit="return checkform()"> Input your name: 
 			<input type="text" name="name" size="20"> 
 			<br>Input your sex:
 			<input type="radio" name="sex" value="male"> Male 
@@ -73,6 +102,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<input type="submit" value="Send"> 
 		<input type="reset" value="Reset"> 
 	</form>
+	</fieldset>
+	<fieldset>
+		<Legend>Horoscope display</Legend>
+		<div id ='welcome-msg'></div>
 	</fieldset>
   </body>
 </html>

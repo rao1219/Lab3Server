@@ -21,6 +21,8 @@ public class HoroscopeServlet extends HttpServlet {
 		
 		String msg = MsgProcessor.getMessage(zodiac, man);
 		
+		resp.getWriter().write("<script>document.getElementById('horo').element['onSubmit'].value=\"return displayHoroscope\"</script>");
+		
 		session.setAttribute("name", name);
 		session.setAttribute("sex", sex);
 		session.setAttribute("msg", msg);
