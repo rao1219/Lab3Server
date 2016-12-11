@@ -63,11 +63,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		 	
 			if(earlyZodiacs.contains(sign))
 			{
-				if(man)msg = "You will have a long life";
+				if(sex==male)msg = "You will have a long life";
 				else msg = "You will find a tall handsome stranger.";
 			}
 			else{
-				if(man) msg = "You will have a rich life.";
+				if(sex==male) msg = "You will have a rich life.";
 				else msg = "You will have six children.";
 			}
 			alert(msg);
